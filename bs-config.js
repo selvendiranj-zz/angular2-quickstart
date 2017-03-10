@@ -21,7 +21,7 @@ module.exports = {
             port: 8080
         }
     },
-    files: ['./**/*.{html,htm,css,js}'],
+    files: false,
     watchEvents: [
         'change'
     ],
@@ -95,7 +95,7 @@ module.exports = {
     ],
     socket: {
         socketIoOptions: {
-            log: true
+            log: false
         },
         socketIoClientConfig: {
             reconnectionAttempts: 50

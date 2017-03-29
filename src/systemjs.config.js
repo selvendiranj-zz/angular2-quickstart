@@ -2,7 +2,7 @@
  * System configuration for Angular samples
  * Adjust as necessary for your application needs.
  */
-(function (global) {
+(function(global) {
 
     var paths = {
         // paths serve as alias
@@ -41,7 +41,7 @@
         'firebase': 'npm:angularfire2/node_modules/firebase/firebase.js',
         'angularfire2': 'npm:angularfire2/bundles/angularfire2.umd.js',
     };
-    
+
     // packages tells the System loader how to load when no filename and/or no extension
     packages = {
         app: { main: './main.js', defaultExtension: 'js' },
@@ -59,5 +59,9 @@
     if (global.filterSystemConfig) { global.filterSystemConfig(config); }
 
     System.config(config);
+
+    System.import('main.js').catch(function(err) {
+        console.error(err);
+    });
 
 })(this);
